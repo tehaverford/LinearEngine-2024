@@ -38,7 +38,7 @@ public class Level {
         sect1 = new Sectors(1, 0, 4, 0.0, 5.0);
 
         // Walls.
-        Wall1 = new Wall(10, 10, 400, 1, 1);
+        Wall1 = new Wall(10, 1, 400, 10, 1);
         Wall2 = new Wall(5, 5, 4, 1, 1);
         Wall3 = new Wall(5, 5, 5, 2, 1);
         Wall4 = new Wall(4, 5, 5, 3, 1);

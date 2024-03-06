@@ -33,15 +33,22 @@ public class Screen {
             double xOffset = x + i;
 
             for (int y = 0; y < mapH; y++) {
+                double yOffset = y + i;
 
                 // Detect A X or X1 of the wall.
-                if (xOffset == Level.Wall1.X) {
-                    WallDetected = true;
-                    break;
+                if (xOffset == Level.Wall1.X && yOffset == Level.Wall1.Y) {
+                    // Make sure the point is Infront of the player.
+                    // Otherwise do not render.
+                    if (Level.Wall1.Y <= camera.yPos || Level.Wall1.Y1 <= camera.yPos) {
+                        WallDetected = true;
+                        break;
+                    }
                 }
-                if (xOffset == Level.Wall1.X1) {
-                    WallDetected = true;
-                    break;
+                if (xOffset == Level.Wall1.X1 && yOffset == Level.Wall1.Y1) {
+                    if (Level.Wall1.Y <= camera.yPos || Level.Wall1.Y1 <= camera.yPos) {
+                        WallDetected = true;
+                        break;
+                    }
                 }
             }
         }
@@ -55,6 +62,8 @@ public class Screen {
         int mapX = (int) camera.xPos;
         int mapY = (int) camera.yPos;
 
+        double RenderDistence = 70;
+
         double WallX = Level.Wall1.X;
         double WallY = Level.Wall1.Y;
 
@@ -65,21 +74,31 @@ public class Screen {
         double WallSize = WallX + WallX1;
 
         for (int i = 0; i < FOV; i++) {
-            // Detect If Wall Coordnates is between xDir and yDir.
+            // Detect If Wall Coordinates is between xDir and yDir.
             inside(i, mapW, mapH);
 
             if (WallDetected) {
-                // System.out.println("Wall Detected!");
+                System.out.println("Wall Detected!");
 
                 // Find the proper coordnate according to Screen Size
                 // To Place Our Good Old wall(s).
 
                 test.DrawWall(g, Level.Wall1.X, Level.Wall1.Y, Level.Wall1.X1, Level.Wall1.Y1, Level.Wall1.X + Level.Wall1.X1);
+
+                // Without this the wall rendering is laggy due to it repainting
+                // Not very frequiently. For key input.
+                camera.update();
                 WallDetected = false;
             }
             else {
                 // System.out.println("No Wall.");
+                /*
+                System.out.println("Y: " + WallY);
+                System.out.println("Y1: " + WallY1);
+                */
             }
+
+            EntryPoint.render.update();
         }
     }
 }

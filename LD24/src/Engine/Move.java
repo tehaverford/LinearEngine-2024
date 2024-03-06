@@ -10,8 +10,15 @@ package Engine;
 
 public class Move {
     public static void MoveWallsW(double MOVE_SPEED) {
-        Level.Wall1.X += 1;
-        Level.Wall1.X1 += 1;
+        // We Subtract the Y axis to make the wall closer
+        // to the player appearing like its moving towards.
+        Level.Wall1.Y -= MOVE_SPEED;
+        Level.Wall1.Y1 -= MOVE_SPEED;
+    }
+
+    public static void MoveWallsS(double MOVE_SPEED) {
+        Level.Wall1.Y += MOVE_SPEED;
+        Level.Wall1.Y1 += MOVE_SPEED;
     }
 
     public static void MoveWallsD(double MOVE_SPEED) {
@@ -26,12 +33,27 @@ public class Move {
     public static void MoveWallsA(double MOVE_SPEED) {
         Level.Wall1.X -= MOVE_SPEED;
         Level.Wall1.X1 -= MOVE_SPEED;
+
+        EntryPoint.render.update();
     }
 
     public static void RotateWallsLeft(double rotationAmount) {
-       Level.Wall1.Y -= rotationAmount;
+        Level.Wall1.X += rotationAmount;
+        Level.Wall1.X1 += rotationAmount;
 
+        for (int i = 0; i < 200; i++) {
+            Level.Wall1.Y1 -= (int) rotationAmount;
+        }
         // Trigger redraw
+        EntryPoint.render.update();
+    }
+
+    public static void RotateWallsRight(double rotationAmount) {
+        Level.Wall1.X -= rotationAmount;
+        Level.Wall1.X1 -= rotationAmount;
+        for (int i = 0; i < 200; i++) {
+            Level.Wall1.Y += (int) rotationAmount;
+        }
         EntryPoint.render.update();
     }
 }

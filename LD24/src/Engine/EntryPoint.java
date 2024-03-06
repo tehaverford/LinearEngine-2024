@@ -8,13 +8,15 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+import Math.Math;
+
 import javax.swing.*;
 
 public class EntryPoint extends Canvas implements Runnable {
     public final static int WIDTH = 800;
     public final static int HEIGHT = 600;
     public static boolean IsRunning = false;
-    public final static String TITLE = "Maple Engine [Alpha 1.0]";
+    public final static String TITLE = "Linear Engine (Test)";
 
     static Thread thread;
     public static BufferedImage img;

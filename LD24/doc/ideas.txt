@@ -246,3 +246,9 @@ Problem: Make the Walls move according to Move Speed.
 Part of problem: When we convert double's to Int's we get dumb results.
 
 Them doubles aint casting to ints :/
+
+For rotation, Sprite change and increase X axis.
+
+We can code trigonometry from scratch essentially by having forming triangles on the
+X and Y axis using vectors. Then having a point on the vector. Increasing that Point
+representing as Angle a it goes up the vector and down.

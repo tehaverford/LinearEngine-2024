@@ -13,7 +13,7 @@ public class Camera implements KeyListener {
     public final double FOV;
 
     public boolean FORWARD, BACK, RIGHT, LEFT, ROTATELEFT, ROTATERIGHT;
-    public double ROTATE_SPEED = 3.14;
+    public double ROTATE_SPEED = 10;
     public static double MOVE_SPEED = 6.0;
 
     public static double angle;
@@ -38,10 +38,10 @@ public class Camera implements KeyListener {
         // TODO: Rotation? (\_(''/)_/)
 
         if (FORWARD) {
-
+            Move.MoveWallsW(MOVE_SPEED);
         }
         if (BACK) {
-
+            Move.MoveWallsS(MOVE_SPEED);
         }
         if (RIGHT) {
             Move.MoveWallsD(MOVE_SPEED);
@@ -53,7 +53,7 @@ public class Camera implements KeyListener {
             Move.RotateWallsLeft(ROTATE_SPEED);
         }
         if (ROTATERIGHT) {
-            Move.RotateWallsLeft(ROTATE_SPEED);
+            Move.RotateWallsRight(ROTATE_SPEED);
         }
         EntryPoint.render.repaint();
     }
