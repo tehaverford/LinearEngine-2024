@@ -35,7 +35,7 @@ public class Level {
         // TODO: Load Level from a txt file.
 
         // For now lets manually assign stuff.
-        sect1 = new Sectors(1, 0, 4, 0.0, 5.0);
+        sect1 = new Sectors(1, 0, 4, 600.0, 50.0);
 
         // Walls.
         Wall1 = new Wall(10, 1, 400, 10, 1);

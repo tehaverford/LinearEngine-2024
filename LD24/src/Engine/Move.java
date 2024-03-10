@@ -38,22 +38,16 @@ public class Move {
     }
 
     public static void RotateWallsLeft(double rotationAmount) {
-        Level.Wall1.X += rotationAmount;
         Level.Wall1.X1 += rotationAmount;
-
-        for (int i = 0; i < 200; i++) {
-            Level.Wall1.Y1 -= (int) rotationAmount;
-        }
+        Level.Wall1.Y += rotationAmount;
         // Trigger redraw
         EntryPoint.render.update();
     }
 
     public static void RotateWallsRight(double rotationAmount) {
-        Level.Wall1.X -= rotationAmount;
         Level.Wall1.X1 -= rotationAmount;
-        for (int i = 0; i < 200; i++) {
-            Level.Wall1.Y += (int) rotationAmount;
-        }
+        Level.Wall1.Y -= rotationAmount;
+
         EntryPoint.render.update();
     }
 }

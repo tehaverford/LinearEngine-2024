@@ -21,7 +21,22 @@ public class Render extends JPanel {
 
         // TODO: Transformations remember terry davis's way.
 
-        g.drawRect((int) X, (int) X1, (int) X1, (int) Y1);
+        // Get Player Angle.
+
+        /*
+        for (int i = 0; i < 200; i++) {
+            g.drawLine((int) X + i, (int) Y, (int) X + i, (int) Y1);
+        }
+        */
+
+        for (int i = 0; i < 90; i++) {
+            int[] x = {(int) X + i, (int) X + i};
+            int[] y = {(int) Y + i, (int) Y1 - i};
+
+            Polygon p = new Polygon(x, y, 2);
+
+            g.drawPolygon(p);
+        }
     }
 
     public void clearScreen(Graphics g) {
@@ -33,7 +48,7 @@ public class Render extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         clearScreen(g);
-        DrawWall(g, Level.Wall1.X, Level.sect1.CeilingLevel, Level.Wall1.X1, Level.sect1.CeilingLevel, 200);
+        DrawWall(g, Level.Wall1.X, Level.sect1.CeilingLevel, Level.Wall1.X1, Level.sect1.FloorLevel, 200);
     }
 
     public void update() {
