@@ -18,3 +18,8 @@ if its doing it constantly. So without the stuff it greatly enhances performance
 
 I am not taking any contribuations just letting you know but feature requests and feedback is always
 Welcomed :)
+
+(3/10/2024)
+
+After a month of work I got a Angled wall up and rendering.
+![image](https://github.com/AudioTore2/LinearEngine-2024/assets/160814632/fd1cdd71-5d2d-4ff2-90d7-c5d2540187f8)
