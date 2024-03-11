@@ -14,5 +14,4 @@ After a month of work I got a Angled wall up and rendering.
 (3/11/2024)
 
 Some Bugs fixed + Some "3D" here.
-
 ![image](https://github.com/AudioTore2/LinearEngine-2024/assets/160814632/0662a9bb-f01b-42ea-9979-8e49328b5e54)
