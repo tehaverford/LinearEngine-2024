@@ -10,3 +10,9 @@ It is fast optimized, open source Public Domain. Linear Algebra is not used.
 
 After a month of work I got a Angled wall up and rendering.
 ![image](https://github.com/AudioTore2/LinearEngine-2024/assets/160814632/fd1cdd71-5d2d-4ff2-90d7-c5d2540187f8)
+
+(3/11/2024)
+
+Some Bugs fixed + Some "3D" here.
+
+![image](https://github.com/AudioTore2/LinearEngine-2024/assets/160814632/0662a9bb-f01b-42ea-9979-8e49328b5e54)
