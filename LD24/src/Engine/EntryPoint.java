@@ -8,9 +8,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-import Math.Math;
-
 import javax.swing.*;
+
+import math.Math;
 
 public class EntryPoint extends Canvas implements Runnable {
     public final static int WIDTH = 800;

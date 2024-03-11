@@ -36,10 +36,11 @@ public class Level {
 
         // For now lets manually assign stuff.
         sect1 = new Sectors(1, 0, 4, 600.0, 50.0);
-
-        // Walls.
-        Wall1 = new Wall(10, 1, 400, 10, 1);
-        Wall2 = new Wall(5, 5, 4, 1, 1);
+        
+        // Walls Formatted Like this: <X> <Y> <X1> <Y1>
+        // On the 2D Plane.
+        Wall1 = new Wall(10, 0, 20, 0, 0);
+        Wall2 = new Wall(5, 1, 4, 1, 1);
         Wall3 = new Wall(5, 5, 5, 2, 1);
         Wall4 = new Wall(4, 5, 5, 3, 1);
     }

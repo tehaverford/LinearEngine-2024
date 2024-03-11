@@ -12,13 +12,17 @@ public class Move {
     public static void MoveWallsW(double MOVE_SPEED) {
         // We Subtract the Y axis to make the wall closer
         // to the player appearing like its moving towards.
-        Level.Wall1.Y -= MOVE_SPEED;
-        Level.Wall1.Y1 -= MOVE_SPEED;
+    	/*
+        Level.Wall1.X -= MOVE_SPEED;
+        Level.Wall1.X1 -= MOVE_SPEED;
+    	*/
     }
 
     public static void MoveWallsS(double MOVE_SPEED) {
-        Level.Wall1.Y += MOVE_SPEED;
-        Level.Wall1.Y1 += MOVE_SPEED;
+        /*
+    	Level.Wall1.X += MOVE_SPEED;
+        Level.Wall1.X1 += MOVE_SPEED;
+    	*/
     }
 
     public static void MoveWallsD(double MOVE_SPEED) {
