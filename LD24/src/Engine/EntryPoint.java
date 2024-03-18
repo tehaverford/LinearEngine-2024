@@ -106,7 +106,7 @@ public class EntryPoint extends Canvas implements Runnable {
         // Load our Level and its context.
         // Then by default should load our
         // Level data for 3D Space to Render. (Render.class)
-        Level.Load("C:\\Users\\thomas\\Documents\\Level.txt");
+        Level.Load(camera, "C:\\Users\\thomas\\Documents\\Level.txt");
 
         while (IsRunning) {
             Render();

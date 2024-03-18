@@ -13,8 +13,8 @@ public class Camera implements KeyListener {
     public final double FOV;
 
     public boolean FORWARD, BACK, RIGHT, LEFT, ROTATELEFT, ROTATERIGHT;
-    public double ROTATE_SPEED = 10;
-    public static double MOVE_SPEED = 1.0;
+    public double ROTATE_SPEED = .08;
+    public static double MOVE_SPEED = .08;
 
     public static double angle;
     Screen screen;

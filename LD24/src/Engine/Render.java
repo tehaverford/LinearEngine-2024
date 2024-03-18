@@ -23,26 +23,38 @@ public class Render extends JPanel {
 
         // Get Player Angle.
 
-        /*
-        for (int i = 0; i < 200; i++) {
-            g.drawLine((int) X + i, (int) Y, (int) X + i, (int) Y1);
-        }
-        */
-
         math.Math mt = new math.Math();
-
-        int wallangle = (int) Level.Wall1.Y + (int) Level.Wall1.Y1;
-        int wallsize = (int) mt.Sqrt(Level.Wall1.X + Level.Wall1.X1);
         
-        for (int i = 0; i < wallsize; i++) {
-            int[] x = {(int) X + i, (int) X + i};
+        // int wallangle = (int) Level.Wall1.Y + (int) Level.Wall1.Y1;
+        // int wallsize = (int) mt.Sqrt(Level.Wall1.X * Level.Wall1.X + Level.Wall1.X1 * Level.Wall1.X1);
+        
+        // Bug: WallSize is not static so it causes a Wall Stretch..
+        
+        
+        // TODO: Move Wall Without increasing WallSize keeping it static.
+        
+        /*
+        for (int i = 0; i < 90; i++) {
+            g.drawLine((int) X + i, (int) Y1 + i, (int) X, (int) Y + i);
+        }
+        
+        */
+        
+        System.out.println("X1:" + (int) Level.Wall1.X);
+        System.out.println("X:" + (int) Level.Wall1.X1);
+        
+        
+        
+        for (int i = 0; i < 70; i++) {
+        	// int[] x = {(int) X * i, (int) X1 * i}; for some cool perspective transformation effects.
+        	
+        	int[] x = {(int) X * i, (int) X1 * i};
             int[] y = {(int) Y + i * (int) Level.Wall1.Y, (int) Y1 - i * (int) Level.Wall1.Y1};
-
-            System.out.println((int)-Level.Wall1.Y);
             
             Polygon p = new Polygon(x, y, 2);
             g.drawPolygon(p);
         }
+        
     }
 
     public void clearScreen(Graphics g) {

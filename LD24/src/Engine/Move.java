@@ -28,10 +28,13 @@ public class Move {
     public static void MoveWallsD(double MOVE_SPEED) {
         // ERROR: Maybe something to do with this and WallSize calculations??
         // System.out.println("D Key: " + MOVE_SPEED);
-        Level.Wall1.X += MOVE_SPEED;
+        
+    	
+    	Level.Wall1.X += MOVE_SPEED;
         Level.Wall1.X1 += MOVE_SPEED;
 
         EntryPoint.render.update(); // Trigger redraw
+    	
     }
 
     public static void MoveWallsA(double MOVE_SPEED) {
@@ -42,16 +45,20 @@ public class Move {
     }
 
     public static void RotateWallsLeft(double rotationAmount) {
-        Level.Wall1.X1 += rotationAmount;
+        /*
+    	Level.Wall1.X += rotationAmount;
         Level.Wall1.Y += rotationAmount;
         // Trigger redraw
         EntryPoint.render.update();
+    	*/
     }
 
     public static void RotateWallsRight(double rotationAmount) {
-        Level.Wall1.X1 -= rotationAmount;
+        /*
+    	Level.Wall1.X -= rotationAmount;
         Level.Wall1.Y -= rotationAmount;
 
         EntryPoint.render.update();
+    	*/
     }
 }

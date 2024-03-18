@@ -252,3 +252,33 @@ For rotation, Sprite change and increase X axis.
 We can code trigonometry from scratch essentially by having forming triangles on the
 X and Y axis using vectors. Then having a point on the vector. Increasing that Point
 representing as Angle a it goes up the vector and down.
+
+
+Ok I can render wall angle.. Not slanting the wall but drawing it at an angle like
+drawing an angled wall on paper almost...
+
+But what about rotation.. No we can render wall at the predefined angle..
+We can try else.
+
+Just how to rotate.. wait.
+
+Maybe we do render wall at angle
+Start with rendering angled walls..
+
+Draw multiple rects.. Won't be efficent but
+would work in theory..
+
+Oh. I know how we can rotate. We can rotate by doing a circle thing.
+When rotating we can move object X by NUM amount of times by X axis
+then Y once it hits it. We can use circle rotation as I call it. We just need to render
+walls at angle now I hope..
+
+We can just render wall at angle relative to the camera. Rotating the whole world would be
+difficult
+
+So whats our first thing..
+
+Multiply Wall by Angle (Done I think). then we render wall at angle. No none of these.
+Back to the drawing board. what else
+
+Keep rendering wall by player angle. But how do we rotate without the use of trig.

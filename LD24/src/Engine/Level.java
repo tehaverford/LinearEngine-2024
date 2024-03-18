@@ -17,21 +17,21 @@ public class Level {
 
     public static String contents;
 
-    public static void Load(String PathToFile) {
+    public static void Load(Camera camera, String PathToFile) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(PathToFile));
 
             while ((contents = br.readLine()) != null) {
                 // Parse Data here.
                 // System.out.println(contents);
-                Parse(contents);
+                Parse(camera, contents);
             }
         } catch (Exception err) {
             err.printStackTrace();
         }
     }
 
-    public static void Parse(String Contents) {
+    public static void Parse(Camera camera, String Contents) {
         // TODO: Load Level from a txt file.
 
         // For now lets manually assign stuff.
@@ -39,7 +39,7 @@ public class Level {
         
         // Walls Formatted Like this: <X> <Y> <X1> <Y1>
         // On the 2D Plane.
-        Wall1 = new Wall(10, 0, 20, 0, 0);
+        Wall1 = new Wall(10, 0, 20, 2, 1);
         Wall2 = new Wall(5, 1, 4, 1, 1);
         Wall3 = new Wall(5, 5, 5, 2, 1);
         Wall4 = new Wall(4, 5, 5, 3, 1);
