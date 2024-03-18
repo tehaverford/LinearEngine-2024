@@ -22,3 +22,5 @@ I decided to move onto another project since this was not working out but
 here is a good part where we left off at.
 
 ![image](https://github.com/AudioTore2/LinearEngine-2024/assets/160814632/c8cba8d9-af81-4a8d-b015-2c9af08ed61d)
+
+Project Might be Continued But I'll leave it here for now
