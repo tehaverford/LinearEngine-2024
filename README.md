@@ -4,8 +4,9 @@
 
 # About
 
-Linear is a Psuedo 3D (2.5D) Renderer Written entirely from scratch In Java zero external librarys.
-It is fast optimized, open source Public Domain. Linear Algebra is not used.
+This is an abandoned project testing the idea of pseudo 3D without the use of any de-facto graphics APIs, or standard linear algrebra notation.
+Keep in mind that this project has been left with an blank screen, but below you can find screenshots of my trial and errors and semi-successes.
+
 (3/10/2024)
 
 After a month of work I got a Angled wall up and rendering.
